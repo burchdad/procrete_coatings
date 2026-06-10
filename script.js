@@ -1,6 +1,7 @@
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
+const comparePanels = document.querySelectorAll("[data-compare]");
 
 const setHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -21,4 +22,16 @@ nav.addEventListener("click", (event) => {
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Open navigation");
   }
+});
+
+comparePanels.forEach((panel) => {
+  const stage = panel.querySelector(".compare-stage");
+  const range = panel.querySelector(".compare-range");
+
+  const updateCompare = () => {
+    stage.style.setProperty("--position", `${range.value}%`);
+  };
+
+  updateCompare();
+  range.addEventListener("input", updateCompare);
 });
