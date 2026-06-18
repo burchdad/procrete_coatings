@@ -20,12 +20,30 @@
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" data-nav>
-        <a href="index.html#transform">Before/After</a>
-        <a href="index.html#different">Why Rubber</a>
-        <a href="rubber-pool-decks.html">Rubber Decks</a>
-        <a href="service-areas.html">Cities</a>
-        <a class="nav-phone" href="tel:+19034808443">903-480-8443</a>
+            <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a class="nav-parent" href="gallery.html">Gallery</a>
+          <div class="nav-menu" aria-label="Project gallery pages">
+            <a href="gallery.html">All Projects</a>
+            <a href="project-canton.html">Canton Pool Deck</a>
+          </div>
+        </div>
+        <a href="why-rubber.html">Why Rubber</a>
+        <div class="nav-dropdown">
+          <a class="nav-parent" href="services.html">Services</a>
+          <div class="nav-menu" aria-label="Service pages">
+            <a href="services.html">All Services</a>
+            <a href="rubber-pool-decks.html">Rubber Pool Decks</a>
+            <a href="pool-deck-repair.html">Pool Deck Repair</a>
+            <a href="slip-resistant-pool-decks.html">Slip Resistant Decks</a>
+            <a href="cool-pool-deck-surfaces.html">Cool Surfaces</a>
+            <a href="service-areas.html">Service Areas</a>
+          </div>
+        </div>
+        <a href="process.html">Process</a>
+        <a href="faq.html">FAQ</a>
+        <a class="nav-phone" href="contact.html">Contact</a>
       </nav>
     </header>
     <main id="main">
@@ -41,6 +59,14 @@
             <a class="button button-glass" href="index.html#transform">See before and after</a>
           </div>
         </div>
+      </section>
+
+      <section class="project-selector" aria-label="Select a project">
+        <label for="project-select">Browse project</label>
+        <select id="project-select" data-project-select>
+          <option value="gallery.html">All projects</option>
+          <option value="project-canton.html">Canton pool deck and patio</option>
+        </select>
       </section>
 
       <section class="section project-feature" aria-labelledby="canton-title">

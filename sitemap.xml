@@ -13,6 +13,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://etxprocoat.com/project-canton.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/why-rubber.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/services.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://etxprocoat.com/pool-deck-repair.html</loc>
     <priority>0.8</priority>
   </url>
@@ -26,6 +38,18 @@
   </url>
   <url>
     <loc>https://etxprocoat.com/service-areas.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/process.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/faq.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/contact.html</loc>
     <priority>0.7</priority>
   </url>
 </urlset>

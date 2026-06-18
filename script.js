@@ -2,6 +2,7 @@ const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const comparePanels = document.querySelectorAll("[data-compare]");
+const projectSelect = document.querySelector("[data-project-select]");
 
 const setHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -35,3 +36,9 @@ comparePanels.forEach((panel) => {
   updateCompare();
   range.addEventListener("input", updateCompare);
 });
+
+if (projectSelect) {
+  projectSelect.addEventListener("change", () => {
+    window.location.href = projectSelect.value;
+  });
+}
