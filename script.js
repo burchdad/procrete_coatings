@@ -3,6 +3,9 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const comparePanels = document.querySelectorAll("[data-compare]");
 const projectSelect = document.querySelector("[data-project-select]");
+const animatedBlocks = document.querySelectorAll(
+  ".section, .proof-strip, .trust-strip, .project-story, .gallery-showcase, .quote-section, .detail-hero, .media-grid, .reel-stack"
+);
 
 const setHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -41,4 +44,24 @@ if (projectSelect) {
   projectSelect.addEventListener("change", () => {
     window.location.href = projectSelect.value;
   });
+}
+
+if ("IntersectionObserver" in window) {
+  animatedBlocks.forEach((block) => block.setAttribute("data-animate", ""));
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  animatedBlocks.forEach((block) => revealObserver.observe(block));
+} else {
+  animatedBlocks.forEach((block) => block.classList.add("is-visible"));
 }
