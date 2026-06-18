@@ -66,8 +66,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 16px 42px;
+  gap: 18px;
+  padding: 16px 32px;
   color: var(--white);
   transition: background 180ms ease, box-shadow 180ms ease, padding 180ms ease;
 }
@@ -80,16 +80,17 @@ a {
 }
 
 .brand img {
-  width: 178px;
+  width: 158px;
   height: auto;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
   font-weight: 800;
-  font-size: 0.84rem;
+  font-size: 0.74rem;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -173,7 +174,7 @@ a {
 }
 
 .nav-phone {
-  padding: 10px 14px;
+  padding: 9px 11px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
 }
@@ -1216,12 +1217,30 @@ h3 {
     #d8e9ee;
 }
 
+.patriot {
+  background:
+    radial-gradient(circle at 14% 30%, #ffffff 0 4px, transparent 5px),
+    radial-gradient(circle at 42% 62%, #c81313 0 4px, transparent 5px),
+    radial-gradient(circle at 68% 28%, #0b6fb4 0 4px, transparent 5px),
+    radial-gradient(circle at 84% 72%, #6f7680 0 4px, transparent 5px),
+    #e7ebef;
+}
+
 .saddle {
   background:
     radial-gradient(circle at 18% 34%, #efe0c6 0 5px, transparent 6px),
     radial-gradient(circle at 58% 58%, #5a4637 0 5px, transparent 6px),
     radial-gradient(circle at 78% 30%, #caa976 0 5px, transparent 6px),
     #b68d62;
+}
+
+.lake {
+  background:
+    radial-gradient(circle at 15% 26%, #e9f8ff 0 4px, transparent 5px),
+    radial-gradient(circle at 46% 66%, #1b8ec6 0 5px, transparent 6px),
+    radial-gradient(circle at 72% 35%, #7b8791 0 4px, transparent 5px),
+    radial-gradient(circle at 88% 78%, #0d4c73 0 4px, transparent 5px),
+    #c7dfe9;
 }
 
 .graphite {

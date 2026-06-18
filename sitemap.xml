@@ -17,6 +17,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://etxprocoat.com/colors.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/specifications.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/quote.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/training.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/careers.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://etxprocoat.com/project-canton.html</loc>
     <priority>0.8</priority>
   </url>
