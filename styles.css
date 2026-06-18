@@ -184,7 +184,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 88svh;
+  min-height: 86svh;
   overflow: hidden;
   color: var(--white);
   background: var(--ink);
@@ -201,19 +201,29 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.54) 38%, rgba(0, 0, 0, 0.16) 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0) 42%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.86) 0%, rgba(0, 0, 0, 0.62) 34%, rgba(0, 0, 0, 0.20) 74%, rgba(0, 0, 0, 0.12) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.08) 48%, rgba(0, 0, 0, 0.30) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
-  padding: 172px 42px 140px;
+  max-width: 810px;
+  padding: 164px 42px 120px;
+}
+
+.hero-content::before {
+  content: "";
+  display: block;
+  width: 86px;
+  height: 3px;
+  margin-bottom: 18px;
+  background: var(--red);
 }
 
 .eyebrow {
@@ -237,10 +247,10 @@ p {
 }
 
 h1 {
-  max-width: 720px;
-  margin-bottom: 22px;
-  font-size: 4.8rem;
-  line-height: 0.94;
+  max-width: 780px;
+  margin-bottom: 24px;
+  font-size: 5.35rem;
+  line-height: 0.9;
   letter-spacing: 0;
   overflow-wrap: break-word;
 }
@@ -260,32 +270,48 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 660px;
-  margin-bottom: 32px;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 1.18rem;
+  max-width: 720px;
+  margin-bottom: 34px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.22rem;
+  line-height: 1.55;
   overflow-wrap: break-word;
 }
 
 .hero-points {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  max-width: 620px;
-  margin: 0 0 30px;
+  gap: 1px;
+  max-width: 720px;
+  margin: 0 0 34px;
   padding: 0;
   list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(14px);
 }
 
 .hero-points li {
-  padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.36);
-  color: rgba(255, 255, 255, 0.9);
+  display: grid;
+  gap: 4px;
+  min-height: 82px;
+  padding: 16px 18px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.hero-points strong {
+  color: var(--white);
   font-size: 0.9rem;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.hero-points span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
 .hero-actions,
@@ -299,8 +325,8 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 14px 20px;
+  min-height: 52px;
+  padding: 15px 22px;
   border: 0;
   border-radius: 8px;
   font-weight: 900;
@@ -332,13 +358,26 @@ h3 {
 .button-glass {
   color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.38);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(12px);
 }
 
 .button-dark {
   color: var(--white);
   background: var(--ink);
+}
+
+.hero-contact {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+.hero-contact a {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .hero-badges {
@@ -1637,7 +1676,7 @@ details p {
   }
 
   h1 {
-    font-size: 3.15rem;
+    font-size: 3.5rem;
   }
 
   h2 {
@@ -1645,7 +1684,7 @@ details p {
   }
 
   .hero-content {
-    padding: 138px 22px 112px;
+    padding: 138px 22px 104px;
   }
 
   .hero-badges {
@@ -1798,13 +1837,14 @@ details p {
   .hero-content h1,
   .hero-content .hero-copy,
   .hero-points,
-  .hero-actions {
+  .hero-actions,
+  .hero-contact {
     width: calc(100vw - 44px);
     max-width: 346px;
   }
 
   h1 {
-    font-size: 1.92rem;
+    font-size: 2.28rem;
     line-height: 1;
   }
 
@@ -1837,6 +1877,10 @@ details p {
   .area-grid,
   .material-specs {
     grid-template-columns: 1fr;
+  }
+
+  .hero-points li {
+    min-height: auto;
   }
 
   .hero-badges {
