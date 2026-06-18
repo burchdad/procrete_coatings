@@ -5,7 +5,7 @@ Static marketing site for ProCoat Concrete Coatings.
 ## What is included
 
 - Responsive homepage in `index.html`
-- Dedicated pages for gallery/project stories, why rubber, services, process, FAQ, contact, service areas, and SEO service pages
+- Dedicated pages for projects, media/Reels, why rubber, services, process, FAQ, contact, service areas, and SEO service pages
 - Polished CSS in `styles.css`
 - Mobile navigation behavior in `script.js`
 - Original project imagery copied into `assets/images`
