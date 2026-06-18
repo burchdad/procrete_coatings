@@ -4,4 +4,28 @@
     <loc>https://etxprocoat.com/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://etxprocoat.com/rubber-pool-decks.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/gallery.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/pool-deck-repair.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/slip-resistant-pool-decks.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/cool-pool-deck-surfaces.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etxprocoat.com/service-areas.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
