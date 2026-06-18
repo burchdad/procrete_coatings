@@ -101,6 +101,15 @@ a {
   position: relative;
 }
 
+.nav-dropdown::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -18px;
+  right: -18px;
+  height: 22px;
+}
+
 .nav-parent {
   display: inline-flex;
   align-items: center;
@@ -119,11 +128,12 @@ a {
 
 .nav-menu {
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 50%;
   z-index: 70;
   display: grid;
   min-width: 230px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
@@ -132,7 +142,7 @@ a {
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, 8px);
-  transition: opacity 160ms ease, transform 160ms ease;
+  transition: opacity 160ms ease 120ms, transform 160ms ease 120ms;
 }
 
 .nav-menu a {
@@ -153,6 +163,7 @@ a {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, 0);
+  transition-delay: 0ms;
 }
 
 .site-nav a:hover,
@@ -1602,6 +1613,10 @@ details p {
   .nav-dropdown {
     display: grid;
     gap: 8px;
+  }
+
+  .nav-dropdown::before {
+    display: none;
   }
 
   .nav-menu {
