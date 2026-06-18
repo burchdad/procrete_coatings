@@ -411,7 +411,7 @@ h3 {
 
 .reel-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.55fr);
+  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 0.8fr);
   gap: 52px;
   align-items: center;
   max-width: 1160px;
@@ -431,9 +431,16 @@ h3 {
   margin-top: 28px;
 }
 
+.reel-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+}
+
 .reel-frame {
   justify-self: center;
-  width: min(100%, 360px);
+  width: min(100%, 260px);
   padding: 12px;
   border: 1px solid rgba(17, 17, 17, 0.12);
   border-radius: 8px;
@@ -1275,7 +1282,7 @@ details p {
   color: var(--white);
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.34)),
-    url("assets/images/bright-pool-deck.jpg") center / cover;
+    url("assets/images/projects/canton/after-pool-wide.jpg") center / cover;
 }
 
 .gallery-hero > div {
@@ -1295,6 +1302,94 @@ details p {
   gap: 10px;
   padding: 10px;
   background: var(--ink);
+}
+
+.project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(420px, 1fr);
+  gap: 42px;
+  align-items: center;
+  max-width: 1220px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+.project-feature-copy p:not(.eyebrow) {
+  color: var(--steel);
+  font-size: 1.1rem;
+}
+
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.project-meta span {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--porcelain);
+  color: var(--charcoal);
+  font-weight: 900;
+}
+
+.project-compare {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.project-story {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 310px;
+  gap: 10px;
+  padding: 10px;
+  background: var(--ink);
+}
+
+.project-story figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.project-story img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-story figcaption {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.68);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.project-story-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.project-reels {
+  background: var(--porcelain);
+}
+
+.gallery-reels {
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .gallery-showcase figure {
@@ -1439,6 +1534,7 @@ details p {
   .trust-strip,
   .surface-intelligence,
   .reel-section,
+  .project-feature,
   .intro-grid,
   .compare-layout,
   .service-grid,
@@ -1457,7 +1553,8 @@ details p {
   .city-list,
   .signature-grid,
   .compatibility-grid,
-  .concierge-grid {
+  .concierge-grid,
+  .reel-stack {
     grid-template-columns: 1fr;
   }
 
@@ -1525,6 +1622,15 @@ details p {
   .gallery-showcase {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: 260px;
+  }
+
+  .project-story {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 260px;
+  }
+
+  .reel-frame {
+    width: min(100%, 340px);
   }
 }
 
@@ -1642,9 +1748,19 @@ details p {
     grid-auto-rows: 290px;
   }
 
-  .showcase-large {
+  .showcase-large,
+  .project-story-large {
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  .project-story {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 290px;
+  }
+
+  .project-meta {
+    grid-template-columns: 1fr;
   }
 
   .compare-panel {
